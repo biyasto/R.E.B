@@ -11,7 +11,6 @@ public class Movement : MonoBehaviour
     [HideInInspector]
     public Rigidbody2D rb;
     private AnimationScript anim;
-
     [Space]
     [Header("Stats")]
     public float speed = 10;
@@ -26,11 +25,11 @@ public class Movement : MonoBehaviour
     public bool wallJumped;
     public bool isDashing;
     public bool isDead;
-
     [Space]
 
     private bool groundTouch;
     private bool hasDashed;
+    private float jumpTimeCounter;
 
     public int side = 1;
 
@@ -62,18 +61,15 @@ public class Movement : MonoBehaviour
 
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
-
-      
-       
-            rb.gravityScale = 3;
+        rb.gravityScale = 3;
         
     
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !coll.isBounding)
         {
             anim.SetTrigger("jump");
 
             if (coll.onGround)
-                Jump(Vector2.up, false);
+                Jump(Vector2.up);
       
         }
 
@@ -105,7 +101,29 @@ public class Movement : MonoBehaviour
             anim.Flip(side);
         }
 
-
+        if (coll.resetDash)
+        {
+            hasDashed = false;
+            isDashing = false;
+            coll.resetDash = false;
+        }
+      if (coll.isBounding==true)
+        {
+            if (jumpTimeCounter > 0)
+            {
+                Jump(Vector2.up);
+                jumpTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                groundTouch = false;
+                coll.isBounding = false;
+            }
+        }
+        else
+        {
+            jumpTimeCounter = 0.1f;
+        }
     }
 
     void GroundTouch()
@@ -179,7 +197,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-    private void Jump(Vector2 dir, bool wall)
+    private void Jump(Vector2 dir)
     {
       
         ParticleSystem particle =  jumpParticle;

@@ -15,8 +15,8 @@ public class Collision : MonoBehaviour
     public bool onGround;
     public bool onWall;
     public bool isDead;
-    
-
+    public bool isBounding;
+    public bool resetDash;
     [Space]
 
     [Header("Collision")]
@@ -28,7 +28,7 @@ public class Collision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        resetDash = false;
     }
 
     // Update is called once per frame
@@ -55,6 +55,17 @@ public class Collision : MonoBehaviour
             SceneManager.LoadScene("Level1");
 
         }
-       
+        if (collision.CompareTag("Bound"))
+        {
+            isBounding = true;
+            resetDash = true;
+        }
+        if (collision.CompareTag("Energy"))
+        {
+            resetDash = true;
+        }
+
+
     }
+    
 }
