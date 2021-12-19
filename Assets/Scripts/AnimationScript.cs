@@ -22,9 +22,6 @@ public class AnimationScript : MonoBehaviour
     void Update()
     {
         anim.SetBool("onGround", coll.onGround);
-        anim.SetBool("onWall", coll.onWall);
-        anim.SetBool("onRightWall", coll.onRightWall);
-  
         anim.SetBool("canMove", move.canMove);
         anim.SetBool("isDashing", move.isDashing);
 

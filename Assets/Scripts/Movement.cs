@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class Movement : MonoBehaviour
     public bool canMove;
     public bool wallJumped;
     public bool isDashing;
+    public bool isDead;
 
     [Space]
 
@@ -49,6 +51,7 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
+   
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
@@ -186,6 +189,7 @@ public class Movement : MonoBehaviour
 
         particle.Play();
     }
+   
 
     void RigidbodyDrag(float x)
     {
