@@ -34,7 +34,7 @@ public class FallingPlatform : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!isTouched && collision.gameObject.tag == "Player")
+        if (!isTouched && collision.gameObject.CompareTag("Player"))
         {
         
             isTouched = true;

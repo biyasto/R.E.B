@@ -62,7 +62,12 @@ public class Movement : MonoBehaviour
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
         rb.gravityScale = 3;
-        
+
+      //  if (Input.GetButton(buttonName.)
+        if (coll.isDead ||Input.GetButton("Cancel"))
+        {
+            Reload();
+        }    
     
         if (Input.GetButtonDown("Jump") && !coll.isBounding)
         {
@@ -125,8 +130,11 @@ public class Movement : MonoBehaviour
             jumpTimeCounter = 0.1f;
         }
     }
-
-    void GroundTouch()
+    void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }    
+        void GroundTouch()
     {
         hasDashed = false;
         isDashing = false;
