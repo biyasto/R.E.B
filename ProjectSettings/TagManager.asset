@@ -7,6 +7,7 @@ TagManager:
   - Danger
   - Bound
   - Energy
+  - platform
   layers:
   - Default
   - TransparentFX
