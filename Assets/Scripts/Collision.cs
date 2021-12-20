@@ -17,6 +17,7 @@ public class Collision : MonoBehaviour
     public bool isDead;
     public bool isBounding;
     public bool resetDash;
+
     [Space]
 
     [Header("Collision")]
@@ -64,7 +65,20 @@ public class Collision : MonoBehaviour
             resetDash = true;
         }
 
-
     }
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "platform")
+        {
+            transform.parent = collision.gameObject.transform;
+        }    
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "platform")
+        {
+            transform.parent = null;
+        }
+    }
+
 }

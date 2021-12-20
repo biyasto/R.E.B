@@ -191,7 +191,7 @@ public class Movement : MonoBehaviour
         {
            rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
         }
-      //  else
+      else
         {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
         }

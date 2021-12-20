@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
-
+    [SerializeField] public float respawnCD =5f;
+    [SerializeField] public float freezeCD = .75f;
     Vector2 startPos;
     public bool respawns = true;
     public Rigidbody2D rb;
@@ -37,25 +38,26 @@ public class FallingPlatform : MonoBehaviour
         {
         
             isTouched = true;
-            freezeTime = 0.75f;
-            respawnsTime = 5f;
+            freezeTime = .75f;
+            respawnsTime = respawnCD;
 
 
         }
         var layerMask = collision.gameObject.layer;
-        if (layerMask == 6)
+        if (isTouched && freezeTime<-0.01 &&layerMask == 6)
         {
             GetComponent<Collider2D>().enabled = false;
         }
     }
     void Respawn()
     {
-        if (respawns && respawnsTime < 0.01)
+        if (respawns && respawnsTime < -0.01)
         {
             GetComponent<Collider2D>().enabled = true;
             rb.isKinematic = true;
             rb.velocity = new Vector2(0, 0);
             transform.position = startPos;
+            isTouched = false;
         }
     }
  
