@@ -58,7 +58,6 @@ public class Collision : MonoBehaviour
         if (collision.CompareTag("Bound"))
         {
             isBounding = true;
-            resetDash = true;
         }
         if (collision.CompareTag("Energy"))
         {
