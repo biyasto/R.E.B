@@ -29,6 +29,7 @@ public class Collision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         resetDash = false;
     }
 
@@ -42,8 +43,7 @@ public class Collision : MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-
-        var positions = new Vector2[] { bottomOffset, rightOffset, leftOffset };
+        _ = new Vector2[] { bottomOffset, rightOffset, leftOffset };
 
         Gizmos.DrawWireSphere((Vector2)transform.position  + bottomOffset, collisionRadius);
         Gizmos.DrawWireSphere((Vector2)transform.position + rightOffset, collisionRadius);
@@ -53,7 +53,7 @@ public class Collision : MonoBehaviour
     {
         if (collision.CompareTag("Danger"))
         {
-            SceneManager.LoadScene("Level1");
+            isDead = true;
 
         }
         if (collision.CompareTag("Bound"))
@@ -68,14 +68,14 @@ public class Collision : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "platform")
+        if(collision.gameObject.CompareTag("platform"))
         {
             transform.parent = collision.gameObject.transform;
         }    
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "platform")
+        if (collision.gameObject.CompareTag("platform"))
         {
             transform.parent = null;
         }

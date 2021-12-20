@@ -41,7 +41,7 @@ public class AnimationScript : MonoBehaviour
 
     public void Flip(int side)
     {
-        bool state = (side == 1) ? false : true;
+        bool state = side != 1;
         sr.flipX = state;
     }
 }
