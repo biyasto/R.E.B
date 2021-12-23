@@ -71,7 +71,12 @@ public class Collision : MonoBehaviour
         if(collision.gameObject.CompareTag("platform"))
         {
             transform.parent = collision.gameObject.transform;
-        }    
+        }
+        if (collision.gameObject.CompareTag("Danger"))
+        {
+            isDead = true;
+
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {

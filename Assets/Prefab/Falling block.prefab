@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361730d3e6204cf4382109e7c5e37ee0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnCD: 5
+  respawnCD: 99
   freezeCD: 0.75
   respawns: 1
   rb: {fileID: 0}
