@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.587657, y: -0.863853, z: 0}
+  m_LocalPosition: {x: -5.593875, y: -0.863853, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 561292992}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 72057026}
   - component: {fileID: 72057025}
   m_Layer: 0
-  m_Name: Boundery
+  m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -524,7 +524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 309492885}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.872344, y: -1.5161467, z: -10}
+  m_LocalPosition: {x: -2.866126, y: -1.5161467, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1834604}

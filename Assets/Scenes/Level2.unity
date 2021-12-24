@@ -12133,7 +12133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469166160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.695141, y: 2.4377565, z: 0}
+  m_LocalPosition: {x: -7.078562, y: 0.77465105, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2035035776}
@@ -12581,7 +12581,7 @@ PrefabInstance:
     - target: {fileID: 7181501322192444815, guid: 0bf7e2e25a6f5ba47bbdd69953fa8311,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.86
+      value: 43.79
       objectReference: {fileID: 0}
     - target: {fileID: 7181501322192444815, guid: 0bf7e2e25a6f5ba47bbdd69953fa8311,
         type: 3}
@@ -14930,7 +14930,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133611261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.50486, y: 10.062243, z: -10}
+  m_LocalPosition: {x: -10.411438, y: 1.0153493, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469166161}
@@ -21091,7 +21091,7 @@ GameObject:
   - component: {fileID: 1505181237}
   - component: {fileID: 1505181236}
   m_Layer: 0
-  m_Name: Boudery
+  m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21346,12 +21346,12 @@ PrefabInstance:
     - target: {fileID: 299244973347302888, guid: 2fa5da0f85f152e43abe53e5870ee43d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.2
+      value: -17.49
       objectReference: {fileID: 0}
     - target: {fileID: 299244973347302888, guid: 2fa5da0f85f152e43abe53e5870ee43d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 1.79
       objectReference: {fileID: 0}
     - target: {fileID: 299244973347302888, guid: 2fa5da0f85f152e43abe53e5870ee43d,
         type: 3}
@@ -22204,7 +22204,7 @@ PrefabInstance:
     - target: {fileID: 7181501322192444815, guid: 0bf7e2e25a6f5ba47bbdd69953fa8311,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.867
+      value: 43.797
       objectReference: {fileID: 0}
     - target: {fileID: 7181501322192444815, guid: 0bf7e2e25a6f5ba47bbdd69953fa8311,
         type: 3}
