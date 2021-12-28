@@ -14,9 +14,10 @@ public class ShootVerical : MonoBehaviour
     public GameObject bullet;
     public float direction = 1f;
     private float timer = 0;
+    public float startTime=0f;
     void Start()
     {
-
+        timer = startTime;
     }
 
     // Update is called once per frame

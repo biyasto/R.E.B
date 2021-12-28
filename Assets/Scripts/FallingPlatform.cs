@@ -59,6 +59,10 @@ public class FallingPlatform : MonoBehaviour
             transform.position = startPos;
             isTouched = false;
         }
+        if (!respawns && respawnsTime < -0.01)
+        {
+            Destroy(gameObject);
+        }
     }
  
 }
