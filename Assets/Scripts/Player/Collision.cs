@@ -66,6 +66,7 @@ public class Collision : MonoBehaviour
         if (collision.CompareTag("Energy"))
         {
             resetDash = true;
+            Destroy(collision.gameObject);
         }
 
     }
