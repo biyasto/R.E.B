@@ -68,7 +68,9 @@ public class Movement : MonoBehaviour
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
         rb.gravityScale = 3;
 
-        
+        MovingPlatformFix();
+
+
         if ((coll.isDead && !invincible) || Input.GetButton("Cancel"))
         {
             soundDie.Play();
@@ -210,6 +212,20 @@ public class Movement : MonoBehaviour
             hasDashed = false;
     }
 
+    public void MovingPlatformFix()
+    {
+        if (coll.inParented)
+        {
+            rb.interpolation = RigidbodyInterpolation2D.None;
+            coll.inParented = false;
+        }
+       
+        if(coll.outParented)
+        {
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+            coll.outParented = false;
+        }
+    }
     private void Walk(Vector2 dir)
     {
         if (!canMove)

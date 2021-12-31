@@ -17,7 +17,8 @@ public class Collision : MonoBehaviour
     public bool isDead;
     public bool isBounding;
     public bool resetDash;
-
+    public bool inParented;
+    public bool outParented;
     [Space]
 
     [Header("Collision")]
@@ -31,6 +32,8 @@ public class Collision : MonoBehaviour
     {
         isDead = false;
         resetDash = false;
+        inParented = false;
+        outParented = false;
     }
 
     // Update is called once per frame
@@ -71,6 +74,8 @@ public class Collision : MonoBehaviour
         if(collision.gameObject.CompareTag("platform"))
         {
             transform.parent = collision.gameObject.transform;
+            inParented = true;
+            outParented = false;
         }
         if (collision.gameObject.CompareTag("Danger"))
         {
@@ -83,6 +88,8 @@ public class Collision : MonoBehaviour
         if (collision.gameObject.CompareTag("platform"))
         {
             transform.parent = null;
+            inParented = false;
+            outParented = true;
         }
     }
 
