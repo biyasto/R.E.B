@@ -23,7 +23,7 @@ Arrows + Z: Dash
 
 ### Advanced
 
-← / →: Normal Dash
+← / → + Z: Normal Dash
 
 ↑ + Z: Jump Dash
 
