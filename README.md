@@ -13,6 +13,8 @@ Camera: [Cinemachine](https://unity.com/unity/features/editor/art-and-design/cin
 ## Installing
 Google Drive: [Download](https://drive.google.com/drive/u/1/folders/1OHYwgrzXo2k8ms6lgSYTcn1jcWtcm-l4)
 
+Itch.io: [Play](https://biyastogames.itch.io/reb)
+
 ## Control
 ### Basic 
 ← → : Move
