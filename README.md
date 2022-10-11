@@ -4,7 +4,7 @@
 
 
 ## Descriping
-Unity 2D Platformer game, heavily inspired by Celeste movement
+Unity 2D Platformer game - GamePlay GIF below (It's took time to load)
 ## Dependencies
 Tile Map Sheet: [Nate Kling](https://twitter.com/natekling)
 
